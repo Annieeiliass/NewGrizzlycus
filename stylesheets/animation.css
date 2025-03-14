@@ -1,0 +1,82 @@
+/* Открытие занавеса */
+.left-curtain, .right-curtain {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  transition: transform 3.5s ease-in-out;
+}
+.left-curtain img, .right-curtain img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.curtains.active .left-curtain {
+  transform: translateX(-100%);
+}
+.curtains.active .right-curtain {
+  transform: translateX(100%);
+}
+/* Анимации для декораций */
+.item_1, .item_2, .item_3, .item_4, .item_5, .item_6, .item_7 {
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-35px);
+  }
+}
+@keyframes jumpRotate {
+  0%, 100% {
+    transform: translateY(0) scaleX(-1);
+  }
+  50% {
+    transform: translateY(-35px) scaleX(-1);
+  }
+}
+.item_1 {
+  animation-name: jump;
+  animation-delay: 0s;
+}
+.item_2 {
+  animation-name: jump;
+  animation-delay: 0.2s;
+}
+.item_3 {
+  animation-name: jumpRotate;
+  animation-delay: 0.4s;
+}
+.item_4 {
+  animation-name: jumpRotate;
+  animation-delay: 0.6s;
+}
+.item_5 {
+  animation-name: jump;
+  animation-delay: 0.8s;
+}
+.item_6 {
+  animation-name: jump;
+  animation-delay: 1s;
+}
+.item_7 {
+  animation-name: jump;
+  animation-delay: 0.5s;
+}
+/* Бегущая строка в футере */
+@keyframes run {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); 
+  }
+}
+.footer_triangles {
+  width: 200%;
+  margin-top: -1vw;
+  animation: run 10s linear infinite;
+}

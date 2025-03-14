@@ -1,8 +1,8 @@
 @font-face {
-  font-family: "Halvar Mittelschrift DEMO";
-  src: url("../fonts/Halvar-Mittelschrift-ExtraBold-Demo.otf")
-      format("opentype"),
-    url("../fonts/Halvar-Mittelschrift-ExtraBold-Demo.woff") format("woff");
-  font-style: normal;
-  font-weight: 800;
-}
+    src: url("../fonts/HelveticaNeue/HelveticaNeue-Bold.otf") format("truetype"); 
+    font-family: "HelveticaNeueBold";
+} 
+@font-face {
+    src: url("../fonts/HelveticaNeue/HelveticaNeue-Medium.otf") format("truetype"); 
+    font-family: "HelveticaNeue";
+} 

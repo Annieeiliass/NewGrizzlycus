@@ -1,0 +1,160 @@
+/* Адаптив телефон */
+@media only screen and (min-width: 414px) and (max-width: 750px) {
+    .palette img{
+    width: 12vw;
+    }
+    .title img{
+    width: 100vw;
+    margin-top: 40vw;
+    }
+    .button img{
+    width: 60vw;
+    margin-top: 40vw;
+    }
+    .cut img{
+    width: 72vw;
+    }
+    .draggable {
+    cursor: grab;
+    width: 24vw;
+    }
+    .item1 {
+    top: 14%;
+    left: 10%;
+    width: 26vw;
+    }
+    .item2 {
+    top: 5%;
+    left: 55%;
+    width: 27vw;
+    }
+    .item3 {
+    top: 28%;
+    left: 55%;
+    width: 26vw;
+    }
+    .item4 {
+    top: 75%;
+    left: 62%;
+    width: 26vw;
+    }
+    .item5 {
+    top: 75%;
+    left: 21%;
+    width: 30vw;
+    transform: scaleX(-1);
+    }
+    .item6 {
+    top: 54%;
+    left: 58%;
+    width: 30vw;
+    }
+    .item7 {
+    top: 55%;
+    left: 10%;
+    width: 30vw;
+    }
+    .next img {
+    height: 14vw;
+    margin: 0 6vw 4vw 0;
+    cursor: pointer;
+    }
+    .lighting img{
+    width: 54vw;
+    transform: translate(-1vw, 0);
+    }
+    .dress_up{
+    top: 8%;
+    left: 10%;
+    }
+    .dress_up img{
+    width: 80vw;
+    }
+    .bear svg {
+    max-width: auto;
+    max-height: 106vw;
+    }
+    .clown_nose {
+    transform: translate(12vw, 57vw);
+    width: 9vw;
+    }
+    .smile {
+    transform: translate(7vw, 19vw);
+    width: 31vw;
+    }
+    .clown_hat {
+    width: 38vw;
+    transform: translate(-14vw, 15vw);
+    }
+    .mustache {
+    width: 33vw;
+    transform: translate(-2vw, 47vw);
+    }
+    .content-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 5;
+    }
+    .bear_drum img {
+    width: 100vw;
+    }
+    .item_1{
+    top: -19%;
+    width: 40vw;
+    left: -5%;
+    z-index: 1;
+    }
+    .item_2{
+    display: none;
+    }
+    .item_3{
+    display: none;
+    }
+    .item_4{
+    display: none;
+    }
+    .item_5{
+    display: none;
+    }
+    .item_6{
+    display: none;
+    }
+    .item_7{
+    top: -11%;
+    width: 43vw;
+    left: 70%;
+    z-index: 1;
+    }
+    .footer {
+    height: 39vw;
+    }
+    .footer_triangles{
+    width: 450%;
+    margin-top: -2vw;
+    animation: run 10s linear infinite;
+    }
+    .footer__columns {
+    flex-direction: column;
+    }
+    .text {
+    order: 1;
+    }
+    .logo {
+    order: 2;
+    }
+    .text p {
+    font-size: 4vw;
+    margin: 2vw 2.5vw;
+    }
+    .logo img {
+    order: -1;
+    width: 90vw;
+    margin: 2vw 2vw 2vw 2vw;
+    }
+}
