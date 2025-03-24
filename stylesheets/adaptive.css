@@ -1,58 +1,58 @@
 /* Адаптив телефон */
-@media only screen and (min-width: 414px) and (max-width: 750px) {
+@media only screen and (min-width: 300px) and (max-width: 749px) {
     .palette img{
     width: 12vw;
     }
     .title img{
-    width: 100vw;
-    margin-top: 40vw;
+    width: 116vw;
+    margin: 52vw 1vw 12vw 1vw;
     }
     .button img{
     width: 60vw;
-    margin-top: 40vw;
+    margin: 46vw 0 4vw 0;
     }
     .cut img{
     width: 72vw;
     }
     .draggable {
     cursor: grab;
-    width: 24vw;
+    width: 22vw;
     }
     .item1 {
-    top: 14%;
+    top: 20%;
     left: 10%;
-    width: 26vw;
-    }
-    .item2 {
-    top: 5%;
-    left: 55%;
     width: 27vw;
     }
+    .item2 {
+    top: 7%;
+    left: 51%;
+    width: 31vw;
+    }
     .item3 {
-    top: 28%;
-    left: 55%;
-    width: 26vw;
+    top: 29%;
+    left: 58%;
+    width: 30vw;
     }
     .item4 {
     top: 75%;
     left: 62%;
-    width: 26vw;
+    width: 29vw;
     }
     .item5 {
     top: 75%;
-    left: 21%;
-    width: 30vw;
+    left: 17%;
+    width: 35vw;
     transform: scaleX(-1);
     }
     .item6 {
-    top: 54%;
-    left: 58%;
-    width: 30vw;
+    top: 57%;
+    left: 56%;
+    width: 34vw;
     }
     .item7 {
-    top: 55%;
+    top: 56%;
     left: 10%;
-    width: 30vw;
+    width: 32vw;
     }
     .next img {
     height: 14vw;
@@ -72,23 +72,27 @@
     }
     .bear svg {
     max-width: auto;
-    max-height: 106vw;
+    max-height: 108vw;
     }
     .clown_nose {
+    top: 23%;
     transform: translate(12vw, 57vw);
     width: 9vw;
     }
     .smile {
-    transform: translate(7vw, 19vw);
+    top: 23%;
+    transform: translate(7vw, 19vw) rotate(-15deg);
     width: 31vw;
     }
     .clown_hat {
-    width: 38vw;
+    top: 20%;
+    width: 43vw;
     transform: translate(-14vw, 15vw);
     }
     .mustache {
     width: 33vw;
-    transform: translate(-2vw, 47vw);
+    top: 23%;
+    transform: translate(-2vw, 47vw) rotate(15deg);
     }
     .content-wrapper {
     position: absolute;
@@ -102,10 +106,10 @@
     z-index: 5;
     }
     .bear_drum img {
-    width: 100vw;
+    width: 116vw;
     }
     .item_1{
-    top: -19%;
+    top: -24%;
     width: 40vw;
     left: -5%;
     z-index: 1;
@@ -126,7 +130,7 @@
     display: none;
     }
     .item_7{
-    top: -11%;
+    top: -16%;
     width: 43vw;
     left: 70%;
     z-index: 1;

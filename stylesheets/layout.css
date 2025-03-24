@@ -6,7 +6,7 @@ body {
   overflow-y: hidden;
 }
 .section__1 {
-  cursor: url('../images/pen.svg') 5 60, auto;
+  cursor: url('../images/pencil.svg') 5 60, auto;
   position: relative;
   overflow-y: auto;
   overflow-x: hidden;
@@ -181,7 +181,7 @@ body {
 .mustache {
   right: 0;
   width: 13vw;
-  transform: translate(-10vw, 13vw);
+  transform: translate(-13vw, 13vw);
 }
 .bear {
   position: absolute;
@@ -247,7 +247,7 @@ body {
   z-index: 2;
 }
 .bear_drum img {
-  width: 36vw;
+  width: 40vw;
   margin: 0;
   padding: 0;
   vertical-align: bottom;
