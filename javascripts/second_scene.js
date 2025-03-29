@@ -46,7 +46,7 @@ function addDragAndDrop(element) {
     let isDragging = false;
     let offsetX, offsetY;
 
-// Функции для перетаскивания вырезанных картинок
+// Функция для начала перетаскивания вырезанных картинок
 function startDrag(clientX, clientY) {
     isDragging = true;
     offsetX = clientX - element.getBoundingClientRect().left;
@@ -54,6 +54,7 @@ function startDrag(clientX, clientY) {
     element.style.position = 'absolute';
     element.style.zIndex = 2;
 }
+// Перетаскивание
 function moveDrag(clientX, clientY) {
     if (isDragging) {
         element.style.left = `${clientX - offsetX}px`;
@@ -84,7 +85,6 @@ document.addEventListener('touchmove', (e) => {
     moveDrag(touch.clientX, touch.clientY);
 });
 document.addEventListener('touchend', endDrag);
-// Отключаем стандартное поведение для события dragstart
 element.addEventListener('dragstart', (e) => {
     e.preventDefault();
 });

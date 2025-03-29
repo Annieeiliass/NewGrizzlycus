@@ -251,15 +251,16 @@ body {
   margin: 0;
   padding: 0;
   vertical-align: bottom;
+  cursor: pointer;
 }
-.item_1, .item_2, .item_3, .item_4, .item_5, .item_6, .item_7{
+.item_1, .item_2, .item_3, .item_4, .item_5, .item_6, .item_7, .item_8, .item_9{
   position: absolute;
   z-index: -1;
 }
 .item_1{
-  top: 34%;
-  width: 17vw;
-  left: 1%;
+  top: 27%;
+  width: 19vw;
+  left: 2%;
 }
 .item_2{
   top: 52%;
@@ -268,7 +269,7 @@ body {
 }
 .item_3{
   top: 22%;
-  width: 23vw;
+  width: 14vw;
   left: 63%;
   transform: scaleX(-1);
 }
@@ -279,19 +280,25 @@ body {
   transform: scaleX(-1);
 }
 .item_5{
-  top: -7%;
+  top: -37%;
   width: 21vw;
-  left: -6%;
+  left: -3%;
 }
 .item_6{
-  top: 2%;
-  width: 13vw;
-  left: 89%;
+  top: -5%;
+  width: 22vw;
+  left: 80%;
 }
 .item_7{
   top: 60%;
-  width: 13vw;
-  left: 85%;
+  width: 15vw;
+  left: 80%;
+}
+.item_8{
+  display: none;
+}
+.item_9{
+  display: none;
 }
 .footer {
   background-color: #FFF8E7;
@@ -305,6 +312,11 @@ body {
   flex-direction: row;
   justify-content: space-around;
 }
+.footer_triangles {
+  width: 200%;
+  margin-top: -1vw;
+  animation: run 10s linear infinite;
+}
 .logo img {
   order: 2;
   width: 68vw;
@@ -315,5 +327,6 @@ body {
   margin: 1vw 2vw 0vw 2vw;
   font-size: 1.5vw;
   color: #EF5A32;
-  font-family: "HelveticaNeueBold";
+  letter-spacing: 1px;
+  font-family: "HelveticaNeueRegular";
 }

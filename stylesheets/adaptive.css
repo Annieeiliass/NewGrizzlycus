@@ -1,5 +1,4 @@
-/* Адаптив телефон */
-@media only screen and (min-width: 300px) and (max-width: 749px) {
+@media only screen and (max-width: 749px) {
     .palette img{
     width: 12vw;
     }
@@ -135,11 +134,26 @@
     left: 70%;
     z-index: 1;
     }
+    .item_8{
+    display: block;
+    top: -56%;
+    width: 70vw;
+    left: 54%;
+    z-index: 1;
+    }
+    .item_9{
+    display: block;
+    top: -84%;
+    width: 70vw;
+    left: -15%;
+    z-index: 1;
+    }
     .footer {
-    height: 39vw;
+    height: 50vw;
+    overflow: hidden;
     }
     .footer_triangles{
-    width: 450%;
+    width: 500%;
     margin-top: -2vw;
     animation: run 10s linear infinite;
     }
@@ -150,15 +164,70 @@
     order: 1;
     }
     .logo {
+    display: flex;
+    justify-content: center;
     order: 2;
     }
     .text p {
-    font-size: 4vw;
+    font-size: 6vw;
     margin: 2vw 2.5vw;
+    letter-spacing: 1px;
     }
     .logo img {
     order: -1;
-    width: 90vw;
-    margin: 2vw 2vw 2vw 2vw;
+    width: 95vw;
+    margin: 1vw 1vw 1vw 1vw;
+    }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1280px) {
+    .item1, .item2, .item3, .item4, .item5, .item6, .item7{
+    width: 18vw;
+    }
+    .clown_nose {
+    transform: translate(12vw, 5vw);
+    width: 3vw;
+    }
+    .smile {
+    transform: translate(7vw, 19vw);
+    width: 11vw;
+    }
+    .clown_hat {
+    right: 0;
+    width: 13vw;
+    transform: translate(-10vw, -1vw);
+    }
+    .mustache {
+    right: 0;
+    width: 13vw;
+    transform: translate(-13vw, 13vw);
+    }
+    .bear_drum img {
+    width: 45vw;
+    }
+    .item_1{
+    top: 24%;
+    width: 22vw;
+    left: -3%;
+    }
+    .item_2{
+    top: 59%;
+    width: 27vw;
+    left: 2%;
+    }
+    .item_4{
+    top: -3%;
+    width: 21vw;
+    left: 25%;
+    }
+    .item_5{
+    top: -40%;
+    width: 23vw;
+    left: -6%;
+    }
+    .item_7{
+    top: 60%;
+    width: 17vw;
+    left: 82%;
     }
 }

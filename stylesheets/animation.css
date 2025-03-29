@@ -17,7 +17,7 @@
   transform: translateX(100%);
 }
 /* Анимации для декораций */
-.item_1, .item_2, .item_3, .item_4, .item_5, .item_6, .item_7 {
+.item_1, .item_2, .item_3, .item_4, .item_5, .item_6, .item_7, .item_8, .item_9 {
   animation-duration: 1.2s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -32,10 +32,10 @@
 }
 @keyframes jumpRotate {
   0%, 100% {
-    transform: translateY(0) scaleX(-1);
+    transform: translateY(0);
   }
   50% {
-    transform: translateY(-35px) scaleX(-1);
+    transform: translateY(-35px);
   }
 }
 .item_1 {
@@ -66,6 +66,14 @@
   animation-name: jump;
   animation-delay: 0.5s;
 }
+.item_8 {
+  animation-name: jump;
+  animation-delay: 0.3s;
+}
+.item_9 {
+  animation-name: jump;
+  animation-delay: 0.9s;
+}
 /* Бегущая строка в футере */
 @keyframes run {
   0% {
@@ -74,9 +82,4 @@
   100% {
     transform: translateX(-50%); 
   }
-}
-.footer_triangles {
-  width: 200%;
-  margin-top: -1vw;
-  animation: run 10s linear infinite;
 }

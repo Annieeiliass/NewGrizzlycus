@@ -7,6 +7,7 @@ section2.classList.toggle('visible');
 // Рисование
 const canvas = document.getElementById('drawingCanvas');
 const ctx = canvas.getContext('2d');
+// Кнопка для изменения цвета и сами цвета кисточки
 const paletteButton = document.querySelector('.palette');
 const colors = ['crimson', 'skyblue', 'darkgreen'];
 let currentColorIndex = 0;
@@ -17,7 +18,7 @@ let isDrawing = false;
 let lastX = 0;
 let lastY = 0;
 
-// Толщина линии и тип линии
+// Толщина линии кисточки и ее тип
 ctx.lineWidth = 10;
 ctx.lineCap = 'round';
 
@@ -36,11 +37,12 @@ function getTouchPos(canvasDom, touchEvent) {
 }
 
 // Обработчики для рисования мышью
+// Начало рисования, получение первой точки  (зажатие мышки)
 canvas.addEventListener('mousedown', (e) => {
     isDrawing = true;
     [lastX, lastY] = [e.offsetX, e.offsetY];
 });
-
+// Продолжение рисования из начатой точки (мышка зажата)
 canvas.addEventListener('mousemove', (e) => {
     if (isDrawing) {
         ctx.strokeStyle = colors[currentColorIndex];
@@ -51,23 +53,24 @@ canvas.addEventListener('mousemove', (e) => {
         [lastX, lastY] = [e.offsetX, e.offsetY];
     }
 });
-
+// Конец рисования  (мышка отпущена)
 canvas.addEventListener('mouseup', () => {
     isDrawing = false;
 });
-
+// Рисование прерывается если покинуло зону рисования (канвас)
 canvas.addEventListener('mouseleave', () => {
     isDrawing = false;
 });
 
 // Обработчики для рисования на сенсорных устройствах
+// Начало рисования, получение первой точки  (зажатие тача)
 canvas.addEventListener('touchstart', (e) => {
     e.preventDefault();
     const touchPos = getTouchPos(canvas, e);
     isDrawing = true;
     [lastX, lastY] = [touchPos.x, touchPos.y];
 });
-
+// Продолжение рисования из начатой точки
 canvas.addEventListener('touchmove', (e) => {
     e.preventDefault();
     if (isDrawing) {
@@ -80,7 +83,7 @@ canvas.addEventListener('touchmove', (e) => {
         [lastX, lastY] = [touchPos.x, touchPos.y];
     }
 });
-
+// Конец рисование (отпускание тача)
 canvas.addEventListener('touchend', () => {
     isDrawing = false;
 });

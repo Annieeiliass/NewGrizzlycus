@@ -1,4 +1,5 @@
 // Функция анимации надписи "наряди его"
+// Виды надписей
 (function () {
   const images = [
     "images/dress_up1.png",
@@ -8,14 +9,24 @@
   ];
   let currentIndex = 0;
   const dressUpImage = document.getElementById('dressUpImage');
-
+// Изменение надписей
   function changeImage() {
       currentIndex = (currentIndex + 1) % images.length;
       dressUpImage.src = images[currentIndex];
   }
   setInterval(changeImage, 250);
 })();
-
+// svg картинка медведя (через простой тег <img> нельзя обращаться к айди глаз)
+fetch("images/bear.svg")
+  .then(response => response.text())
+  .then(svg => {
+    document.getElementById('bear').innerHTML = svg;
+      //svg встроивается в DOM
+    setTimeout(() => {
+        initEyeTracking();
+    }, 0); 
+});
+function initEyeTracking() {
 // Медведь следит за курсором. Находим элементы зрачков.
 const leftPupil = document.getElementById('left-pupil');
 const rightPupil = document.getElementById('right-pupil');
@@ -101,8 +112,9 @@ draggableElements.forEach(element => {
     document.addEventListener('mouseup', stopDragging);
     document.addEventListener('touchend', stopDragging);
 });
-
+}
 // Перенос на секцию 4
+// Элементы секции 4
 document.addEventListener('DOMContentLoaded', function() {
 const toggleButton3 = document.getElementById('toggleButton3');
 const section4 = document.getElementById('section4');
@@ -128,9 +140,14 @@ section4.appendChild(filter);
       curtains.classList.add('active');
       filter.classList.add('active');
     }, 100);
-    // Через 3 секунд убираем фильтр прожектора
+    // Через 3 секунды убирается фильтр прожектора
     setTimeout(() => {
       filter.classList.remove('active');
-    }, 3000); 
+    }, 3200); 
+    // Убираем в z-index -10 фильтр и занавески, чтоб они не мешали взаимодействовать с медведем
+    setTimeout(() => {
+      filter.style.zIndex = '-10';
+      curtains.style.zIndex = '-10';
+    }, 4000); 
   });
 });
