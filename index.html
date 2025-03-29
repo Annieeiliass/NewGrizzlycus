@@ -1,105 +1,143 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		<link rel="stylesheet" href="stylesheets/style.css" />
-		<link type="image/x-icon" href="images/clown_hat.svg" rel="icon">
-		<script src="javascripts/first_scene.js" defer></script>
-		<script src="javascripts/second_scene.js" defer></script>
-		<script src="javascripts/third_scene.js" defer></script>
-		<script src="javascripts/four_scene.js" defer></script>
-		<title>GRIZLIKUS</title>
-	</head>
-<body>
-<section class="section__1" id="section1">
-	<canvas id="drawingCanvas"></canvas>
-	<div class="content">
-		<div class="palette">
-		<img src="images/palette.svg" title="Поменять цвет">
-		</div>
-		<div class="title">
-		<img src="images/title.svg" id="Title">
-		</div>
-		<div class="button">
-		<img src="images/button.svg" id="toggleButton" title="Далее">
-		</div>
-	</div>
-</section>
-<section class="section__2" id="section2">
-	<div class="cut">
-		<img src="images/cut_1.png" id="cutImage">
-	</div>
-		<img src="images/item_1.svg" class="item item1" data-cut="images/itemcut_1.svg" data-new="images/item_cut_1.svg">
-		<img src="images/item_2.svg" class="item item2" data-cut="images/itemcut_2.svg" data-new="images/item_cut_2.svg">
-		<img src="images/item_3.svg" class="item item3" data-cut="images/itemcut_3.svg" data-new="images/item_cut_3.svg">
-		<img src="images/item_4.svg" class="item item4" data-cut="images/itemcut_4.svg" data-new="images/item_cut_4.svg">
-		<img src="images/item_5.svg" class="item item5" data-cut="images/itemcut_5.svg" data-new="images/item_cut_5.svg">
-		<img src="images/item_6.svg" class="item item6" data-cut="images/itemcut_6.svg" data-new="images/item_cut_6.svg">
-		<img src="images/item_7.svg" class="item item7" data-cut="images/itemcut_7.svg" data-new="images/item_cut_7.svg">
-	<div class="next">
-		<img src="images/next.svg" title="Далее" id="toggleButton2">
-	</div>
-</section>
-<section class="section__3" id="section3">
-	<div class="container">
-		<div class="lighting">
-			<img src="images/lights_1.png">
-			<img src="images/lights_2.png">
-		</div>
-		<div class="dress_up">
-			<img src="images/dress_up1.png" id="dressUpImage">
-		</div>
-		<img src="images/clown_nose.svg" class="clown_nose draggable">
-		<img src="images/smile.svg" class="smile draggable">
-		<img src="images/clown_hat.svg" class="clown_hat draggable">
-		<img src="images/mustache.svg" class="mustache draggable">
-		<div class="bear" id="bear"></div>
-	</div>
-	<div class="next">
-		<img src="images/next.svg" title="Далее" id="toggleButton3">
-	</div>
-</section>
-<section class="section__4" id="section4">
-	<div class="curtains">
-		<div class="left-curtain">
-			<img src="images/zanaves_left.png" alt="Левый занавес">
-		</div>
-		<div class="right-curtain">
-			<img src="images/zanaves_right.png" alt="Правый занавес">
-		</div>
-	</div>
-	<div class="content-wrapper">
-		<div class="bear_drum">
-			<img src="images/beardrum_1.svg" id="beardrumImage">
-		</div>
-		<img src="images/decoration_1.svg" class="item_1 draggable-image">
-		<img src="images/decoration_2.svg" class="item_2 draggable-image">
-		<img src="images/decoration_3.svg" class="item_3 draggable-image">
-		<img src="images/decoration_4.svg" class="item_4 draggable-image">
-		<img src="images/decoration_5.svg" class="item_5 draggable-image">
-		<img src="images/decoration_6.svg" class="item_6 draggable-image">
-		<img src="images/decoration_7.svg" class="item_7 draggable-image">
-		<img src="images/decoration_8.svg" class="item_8 draggable-image">
-		<img src="images/decoration_9.svg" class="item_9 draggable-image">
-	</div>
-	<footer class="footer">
-		<img src="images/footer_triangles.svg" class="footer_triangles">
-		<div class="footer__columns">
-		<div class="logo">
-			<img src="images/logo.svg">
-		</div>
-			<div class="text">
-				<p>
-					Анна Котельникова
-					<br>
-					Камилла Рихтер
-					<br>
-					Анна Комкова
-				</p>
-			</div>
-		</div>
-	</footer>
-</section>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link type="image/x-icon" href="images/clown_hat.svg" rel="icon" />
+    <script src="javascripts/first_scene.js" defer></script>
+    <script src="javascripts/second_scene.js" defer></script>
+    <script src="javascripts/third_scene.js" defer></script>
+    <script src="javascripts/four_scene.js" defer></script>
+    <title>GRIZLIKUS</title>
+  </head>
+  <body>
+    <section class="section__1" id="section1">
+      <canvas id="drawingCanvas"></canvas>
+      <div class="content">
+        <div class="palette">
+          <img src="images/palette.svg" title="Поменять цвет" />
+        </div>
+        <div class="title">
+          <img src="images/title.svg" id="Title" />
+        </div>
+        <div class="button">
+          <img src="images/button.svg" id="toggleButton" title="Далее" />
+        </div>
+      </div>
+    </section>
+    <section class="section__2" id="section2">
+      <div class="cut">
+        <img src="images/cut_1.png" id="cutImage" />
+      </div>
+      <img
+        src="images/item_1.svg"
+        class="item item1"
+        data-cut="images/itemcut_1.svg"
+        data-new="images/item_cut_1.svg"
+      />
+      <img
+        src="images/item_2.svg"
+        class="item item2"
+        data-cut="images/itemcut_2.svg"
+        data-new="images/item_cut_2.svg"
+      />
+      <img
+        src="images/item_3.svg"
+        class="item item3"
+        data-cut="images/itemcut_3.svg"
+        data-new="images/item_cut_3.svg"
+      />
+      <img
+        src="images/item_4.svg"
+        class="item item4"
+        data-cut="images/itemcut_4.svg"
+        data-new="images/item_cut_4.svg"
+      />
+      <img
+        src="images/item_5.svg"
+        class="item item5"
+        data-cut="images/itemcut_5.svg"
+        data-new="images/item_cut_5.svg"
+      />
+      <img
+        src="images/item_6.svg"
+        class="item item6"
+        data-cut="images/itemcut_6.svg"
+        data-new="images/item_cut_6.svg"
+      />
+      <img
+        src="images/item_7.svg"
+        class="item item7"
+        data-cut="images/itemcut_7.svg"
+        data-new="images/item_cut_7.svg"
+      />
+      <div class="next">
+        <img src="images/next.svg" title="Далее" id="toggleButton2" />
+      </div>
+    </section>
+    <section class="section__3" id="section3">
+      <div class="container">
+        <div class="lighting">
+          <img src="images/lights_1.png" />
+          <img src="images/lights_2.png" />
+        </div>
+        <div class="dress_up">
+          <img src="images/dress_up1.png" id="dressUpImage" />
+        </div>
+        <img src="images/clown_nose.svg" class="clown_nose draggable" />
+        <img src="images/smile.svg" class="smile draggable" />
+        <img src="images/clown_hat.svg" class="clown_hat draggable" />
+        <img src="images/mustache.svg" class="mustache draggable" />
+        <div class="bear" id="bear"></div>
+      </div>
+      <div class="next">
+        <img src="images/next.svg" title="Далее" id="toggleButton3" />
+      </div>
+    </section>
+    <section class="section__4" id="section4">
+      <div class="curtains">
+        <div class="left-curtain">
+          <img src="images/zanaves_left.png" alt="Левый занавес" />
+        </div>
+        <div class="right-curtain">
+          <img src="images/zanaves_right.png" alt="Правый занавес" />
+        </div>
+      </div>
+      <div class="content-wrapper">
+        <div class="bear_drum">
+          <img src="images/beardrum_1.svg" id="beardrumImage" />
+        </div>
+        <img src="images/decoration_1.svg" class="item_1 draggable-image" />
+        <img src="images/decoration_2.svg" class="item_2 draggable-image" />
+        <img src="images/decoration_3.svg" class="item_3 draggable-image" />
+        <img src="images/decoration_4.svg" class="item_4 draggable-image" />
+        <img src="images/decoration_5.svg" class="item_5 draggable-image" />
+        <img src="images/decoration_6.svg" class="item_6 draggable-image" />
+        <img src="images/decoration_7.svg" class="item_7 draggable-image" />
+        <img src="images/decoration_8.svg" class="item_8 draggable-image" />
+        <img src="images/decoration_9.svg" class="item_9 draggable-image" />
+      </div>
+      <footer class="footer">
+        <img src="images/footer_triangles.svg" class="footer_triangles" />
+        <div class="footer__columns">
+          <div class="logo">
+            <img src="images/logo.svg" />
+          </div>
+          <div class="text">
+            <p>
+              Анна Котельникова
+              <br />
+              Камила Рихтер
+              <br />
+              Анна Комкова
+            </p>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </body>
 </html>
